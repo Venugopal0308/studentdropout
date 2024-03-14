@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Data</title>
+    <link rel="stylesheet" href="/static/studentdata.css" />
+  </head>
+  <body>
+    <h1>Students Data</h1>
+
+    <div class="search-container">
+      <form class="search-form" action="/search" method="POST">
+        <input
+          type="text"
+          name="search_query"
+          placeholder="Search by name..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+      <a href="/student/add_student">
+        <span>Add student</span>
+        <i class="fas fa-tasks" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Reason</th>
+          <th>Year of Dropout</th>
+          <th>Attendance</th>
+          <th>Address</th>
+          <th>School ID</th>
+          <th>Addhar Number</th>
+          <th>Phone</th>
+          <th>Added By</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.reason }}</td>
+          <td>{{ student.year_of_dropout }}</td>
+          <td>{{ student.attendance }}</td>
+          <td>{{ student.address }}</td>
+          <td>{{ student.school_id }}</td>
+          <td>{{ student.addhar_number }}</td>
+          <td>{{ student.phone }}</td>
+          <td>{{ student.added_by }}</td>
+          <td>
+            <form action="/delete/{{ student.id }}" method="POST">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
+        {% for student in search_results %}
+        <tr>
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.reason }}</td>
+          <td>{{ student.year_of_dropout }}</td>
+          <td>{{ student.attendance }}</td>
+          <td>{{ student.address }}</td>
+          <td>{{ student.school_id }}</td>
+          <td>{{ student.addhar_number }}</td>
+          <td>{{ student.phone }}</td>
+          <td>{{ student.added_by }}</td>
+          <td>
+            <form action="/delete/{{ student.id }}" method="POST">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

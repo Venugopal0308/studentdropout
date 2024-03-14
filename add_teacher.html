@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Teacher</title>
+    <link rel="stylesheet" href="/static/add_teacher.css" />
+    <!--<style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    </style>-->
+  </head>
+  <body>
+    <h1>Add Teacher</h1>
+    <form method="POST" action="/teacher/add_teacher">
+      <label for="username">Name:</label><br />
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="address">Address:</label><br />
+      <input type="text" id="address" name="address" required /><br /><br />
+
+      <label for="phone">Phone:</label><br />
+      <input type="text" id="phone" name="phone" required /><br /><br />
+
+      <label for="role_type">Role Type:</label><br />
+      <select id="role_type" name="role_type" required>
+        <option value="teacher">Teacher</option>
+        <option value="admin">Admin</option></select
+      ><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="schools">School Name:</label><br />
+      <select id="schools" name="schools" required>
+        <option value="MJPTBCWR school">
+          MJPTBCWR School, L.B. Nagar, Hyderabad
+        </option>
+        <option value="trr high school">TRR High School, Meerpet</option>
+        <option value="zphs">ZPHS, Ameerpet</option></select
+      ><br /><br />
+
+      <label for="qualification">Qualification:</label><br />
+      <input
+        type="text"
+        id="qualification"
+        name="qualification"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Add Teacher" />
+    </form>
+  </body>
+</html>

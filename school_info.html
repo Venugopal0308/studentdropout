@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Information</title>
+    <link rel="stylesheet" href="/static/studentdata.css" />
+  </head>
+  <body>
+    <h1>School Information</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for school in schools %}
+        <tr>
+          <td>{{ school[0] }}</td>
+          <td>{{ school[1] }}</td>
+          <td>{{ school[2] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

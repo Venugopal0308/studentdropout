@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='login.css') }}"
+    />
+    <!-- Corrected path to CSS file -->
+  </head>
+  <body>
+    <h2>Login</h2>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    <form action="/login" method="post">
+      <label for="username">Username</label>
+      <!-- Changed "email" to "username" for consistency -->
+      <input type="text" id="username" name="username" /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+      <input type="submit" value="Login" />
+      <a href="/createaccount">Create Account</a>
+      <!-- Corrected typo in "createaccount" -->
+    </form>
+  </body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/login.css" />
+  </head>
+  <body>
+    <h2>Login</h2>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    <form action="/login" method="post">
+      <label for="email">email</label>
+      <input type="text" id="username" name="username" /><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+      <input type="submit" value="Login" />
+      <a href="/createaccount">createaccount </a>
+    </form>
+  </body>
+</html>
+-->

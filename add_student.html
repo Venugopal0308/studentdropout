@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Student</title>
+    <link rel="stylesheet" href="/static/add_student.css">
+    <!--<style>body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    input:invalid {
+      border-color: red;
+    }
+    
+    input:valid {
+      border-color: green;
+    }
+    </style>-->
+  </head>
+  <body>
+    <h1>Add Student</h1>
+
+    <form method="POST" action="/student/add_student">
+      <label for="student_name">Student Name:</label><br />
+      <input
+        type="text"
+        id="student_name"
+        name="student_name"
+        required
+      /><br /><br />
+
+      <label for="reason">Reason:</label><br />
+      <input type="text" id="reason" name="reason" required /><br /><br />
+
+      <label for="year">Year:</label><br />
+      <input type="text" id="year" name="year" required /><br /><br />
+
+      <label for="attendance">Attendance:</label><br />
+      <input
+        type="text"
+        id="attendance"
+        name="attendance"
+        required
+      /><br /><br />
+
+      <label for="address">Address:</label><br />
+      <input type="text" id="address" name="address" required /><br /><br />
+
+      <label for="aadhar_number">Aadhar Number:</label><br />
+      <input
+        type="text"
+        id="aadhar_number"
+        name="aadhar_number"
+        required
+      /><br /><br />
+      <label>school name</label>
+      <select name="schools" id="schools">
+        <option value="MJPTBCWR school">MJPTBCWR school','l.b.nagar, hyderabad'
+        </option>
+        <option value="trr high school">trr high schook,meerpet</ooption>
+        <option value="zphs">zphs,ameerpet</option>
+       </select>
+       <br /><br />
+
+      <label for="contact">Contact:</label><br />
+      <input type="text" id="contact" name="contact" required /><br /><br />
+      
+
+      <input type="submit" value="Add Student" />
+    </form>
+
+  </body>
+</html>

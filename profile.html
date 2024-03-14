@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+      .logout {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .logout button {
+        padding: 10px 20px;
+        background-color: #ff5722;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .logout button:hover {
+        background-color: #e64a19;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Profile</h1>
+      <ul>
+        <li><strong>Email:</strong> {{ user.email }}</li>
+        <li><strong>Name:</strong> {{ user.name }}</li>
+        <li><strong>role:</strong> {{ user.role }}</li>
+      </ul>
+
+      <a href="/logout">Logout</a>
+    </div>
+  </body>
+</html>
